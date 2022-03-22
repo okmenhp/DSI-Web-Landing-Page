@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+:root {
+    --color-text: #263238;
+    --color-main: #EE4248;
+    --color-background: #f7f7f7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--color-background)
+}
+
+header {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: all 1s;
+    -webkit-transition: position 10s;
+    -moz-transition: position 10s;
+    -ms-transition: position 10s;
+    -o-transition: position 10s;
+    z-index: 10;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: smoothScroll 1s forwards;
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.header-wraper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 20px
+}
+
+nav ul li ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    width: max-content;
+    box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+    background-color: #fff;
+}
+
+nav>ul>li:hover>a {
+    color: var(--color-main)
+}
+
+nav ul li a {
+    position: relative;
+}
+
+nav>ul .nav-active>a {
+    color: #EE4248;
+}
+
+nav ul .nav-active>a::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    content: '.';
+    height: 2px;
+    width: 100%;
+    background: var(--color-main);
+}
+
+nav ul li a::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    content: '.';
+    height: 2px;
+    width: 0%;
+    margin: auto;
+    color: transparent;
+    background: var(--color-main);
+    transition: all .5s;
+}
+
+nav ul li li:hover a::after {
+    width: 100%;
+    height: 2px;
+}
+
+nav>ul>li:hover>a:after {
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+.fa-angle-down {
+    transition: 1s;
+}
+
+nav ul li:hover .fa-angle-down {
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    transition: 1s;
+}
+
+nav ul li a {
+    color: var(--color-text);
+}
+
+.icon-mobile {
+    display: none;
+}
+
+.nav-icon ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-icon ul li {
+    padding: 20px 10px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.icon {
+    display: inline-block;
+}
+
+.icon-home {
+    width: 20px;
+    height: 19px;
+    background-image: url('../image/nav-home.svg');
+}
+
+.active-icon {
+    width: 20px;
+    height: 19px;
+    background-image: url('../image/nav-home-hover.svg');
+}
+
+.nav-icon ul li:hover .icon-home {
+    background-image: url('../image/nav-home-hover.svg');
+}
+
+.icon-mail {
+    width: 20px;
+    height: 16px;
+    background-image: url('../image/nav-mail.svg');
+}
+
+.nav-icon ul li:hover .icon-mail {
+    background-image: url('../image/nav-mail-hover.svg');
+}
+
+.icon-shuffle {
+    width: 16px;
+    height: 16px;
+    background-image: url('../image/nav-shuffle.svg');
+}
+
+.nav-icon ul li:hover .icon-shuffle {
+    background-image: url('../image/nav-shuffle-hover.svg');
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+
+/* End Navigation */
+
+
+/* Footer  */
+
+.footer {
+    background-color: #fff;
+}
+
+.footer-padding {
+    padding: 20px 0;
+}
+
+.footer-address {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-address p {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 300;
+    color: var(--color-text);
+}
+
+.footer-address h4 {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.footer-contact h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--color-text);
+    padding-bottom: 30px;
+}
+
+.footer-contact p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--color-text);
+}
+
+.footer-coop {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-coop img {
+    padding: 10px 0;
+}
+
+.footer-copyright {
+    background-color: var(--color-main);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* End Footer  */

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/videomodal.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://netteria.net/myscript/jquery/html5videopopup/css/videopopup.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .our-future {
+        padding: 50px 0;
+    }
+    
+    .our-future__video {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('./image/about-us/bg-video1.png');
+        border-radius: 10px;
+        height: 25rem;
+        background-size: cover;
+    }
+    
+    .our-future__video .background-video {
+        width: 100%;
+        border-radius: 8px;
+    }
+    
+    .our-future__video .uk-button {
+        position: absolute;
+    }
+    
+    .uk-button {
+        background: transparent;
+    }
+    
+    .uk-button:focus,
+    .uk-button:hover {
+        background: transparent;
+    }
+    
+    .about-us___banner {
+        padding: 80px 0;
+    }
+    
+    .banner-content h2 {
+        font-size: 48px;
+        font-weight: 300;
+        color: #30444E;
+    }
+    
+    .banner-content h1 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #30444E;
+        line-height: 68px;
+    }
+    
+    .banner-image img {
+        width: 100%;
+    }
+    
+    .banner-image {
+        text-align: center;
+    }
+    
+    .about-us__content {
+        background-color: #fff;
+    }
+    
+    .about-us-title {
+        padding: 20px 0;
+    }
+    
+    .about-us-title h4 {
+        font-size: 32px;
+        color: #263238;
+        line-height: 45px;
+        font-weight: 700;
+    }
+    
+    .about-us__content {
+        padding: 50px 0;
+    }
+    
+    .about-us__content p {
+        padding: 15px 0;
+        font-size: 18px;
+        color: #263238;
+        line-height: 26px;
+        font-weight: 400;
+    }
+    
+    .about-us__future {
+        padding: 50px 0;
+    }
+    
+    .future-content {
+        padding-left: 50px;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .future-content__title h4 {
+        font-weight: 500;
+        font-size: 32px;
+        color: #263238;
+    }
+    
+    .future-video img {
+        border-radius: 8px;
+    }
+    
+    .vision__title {
+        display: flex;
+        align-items: center;
+    }
+    
+    .vision p {
+        padding-left: 52px;
+        padding-top: 10px;
+    }
+    
+    .vision__title h1 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+        color: #263238;
+        padding-left: 20px;
+    }
+    
+    .video-responsive {
+        display: none;
+    }
+    
+    .background-video {
+        border-radius: 8px;
+        width: 100%;
+    }
+    
+    .vision-headline {
+        display: flex;
+    }
+    
+    .mission-headline {
+        display: flex;
+    }
+    
+    .about-us__headline h1 {
+        font-size: 32px;
+        font-weight: 500;
+        letter-spacing: 0.2px;
+        text-transform: capitalize;
+        color: #263238;
+    }
+    
+    .vision {
+        padding: 40px 0;
+    }
+    
+    .vision-headline h2 {
+        padding-left: 20px;
+        font-weight: 500;
+        color: #263238;
+    }
+    
+    .vision-headline img {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .mission p {
+        padding-left: 52px;
+        padding-top: 10px;
+    }
+    
+    .mission-headline h2 {
+        padding-left: 20px;
+        font-weight: 500;
+        color: #263238;
+    }
+    
+    .mission-headline img {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .about-us__video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .about-us__video a {
+        position: absolute;
+    }
+    
+    .future-video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .future-video a {
+        position: absolute;
+    }
+    
+    .about-us__culture {
+        background-color: #EE4248;
+        padding: 50px 0;
+    }
+    
+    .culture-content p {
+        color: #fff;
+        padding: 10px 0;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    
+    .box-culture {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .contact-us {
+        padding: 50px 0;
+        background-color: #fff;
+    }
+    
+    .contact-us__headline {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .contact-us__headline h4 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 45px;
+        color: #263238;
+    }
+    
+    .contact-us__infor {
+        display: flex;
+        padding: 20px 0 20px 20px;
+        align-items: center;
+    }
+    
+    .contact-us__icon a {
+        background-color: rgba(213, 225, 219, 0.4);
+        width: 70px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+    }
+    
+    .contact-us__content {
+        padding-left: 20px;
+    }
+    
+    .contact-us__content h1 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 46px;
+        color: #1F2E35;
+    }
+    
+    .contact-us__content p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        color: #30444E;
+    }
+    
+    .map {
+        position: static;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu nav-active"><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-mail"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-shuffle"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="about-us___banner">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-7 c-12 m-6">
+                        <div class="banner-content">
+                            <h2>to grow the business together</h2>
+                            <h1>Continous effort through improvement and innovation</h1>
+                        </div>
+                    </div>
+                    <div class="col l-5 c-12 m-6">
+                        <div class="banner-image">
+                            <img src="./image/about-us/logo.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us__content">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="about-us-title">
+                        <h4>About Dwidasa Samsara Indonesia (DSI)</h4>
+                        <img src="./image/about-us/line-text.svg">
+                    </div>
+                    <div class="about-us-content">
+                        <p>Dwidasa Samsara Indonesia (DSI) was firstly established in 2010 by the founders, who each of them has a common end objective to innovate new creations by making the most of the ever-growing information technology through DSI’s
+                            distinct front-end based application concept. Managed by a team of professional experts with extensive experience and impressive track records, DSI believes that continuous improvements and innovations assure your business
+                            to run effectively and efficiently.
+                        </p>
+                        <p>Then from that perspective, we named our company ‘Dwidasa Samsara Indonesia’, which means continuous efforts through improvement and innovation will help us evolving toward the forefront position in Indonesia. In responding to
+                            various clients’ specifi c requirements, DSI will work consistently in optimizing its existing reliable resources combined with well-trained team supports, to present particularly the dynamic fi nancial industry sector with
+                            its customized solutions.
+                        </p>
+                        <p>Considering the complexity of the clients’ demand, however notwithstanding the size of the organization, DSI is always committed to work effectively for growing the business together with business partners, through its innovative
+                            and collaborative methodology while assuring a fast response time to customers. That way, the final output is delivered in a secured and timely manner, towards the attainment of the most effi cient outcome.
+                        </p>
+                        <p>For DSI, both technical and non-technical supports are as important as the partnership we have built with your business. Among others, our partnership portfolio has been built with various business segments such as Internet Service
+                            Provider (ISP), Application Service Provider (ASP) and Payment Network corporations. Through such partnerships, we are evolving together to a new height of innovative explorations and effective improvements with purpose to
+                            having a sustainable business operation cycles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us__future">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6 c-12">
+                        <div class="about-us__video">
+                            <img src="./image/about-us/bg-video1.png" class="background-video">
+                            <a href="https://www.youtube.com/watch?v=p6Pjce5khIY" data-youtube-id="p6Pjce5khIY" class="video-banner js-trigger-video-modal">
+                                <img class="video-banner-img" src="./image/about-us/btn-play.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col l-6 c-12">
+                        <div class="future-content">
+                            <div class="about-us__headline">
+                                <h1>Our Future Prespective</h1>
+                                <img src="./image/about-us/line-text.svg" alt="" srcset="">
+                            </div>
+                            <div class="video-responsive">
+                                <img src="./image/about-us/bg-video1.png" class="background-video">
+                                <a href="https://www.youtube.com/watch?v=p6Pjce5khIY" data-youtube-id="p6Pjce5khIY" class="video-banner js-trigger-video-modal">
+                                    <img class="video-banner-img" src="./image/about-us/btn-play.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="vision">
+                                <div class="vision-headline">
+                                    <img src="./image/about-us/vision.svg" alt="" srcset="">
+                                    <h2>Vistion</h2>
+                                </div>
+                                <p>To become the leading application service provider (ASP) focusing on front-end application delivered for Indonesia’s banking and fi nancial industry.</p>
+                            </div>
+                            <div class="mission">
+                                <div class="mission-headline">
+                                    <img src="./image/about-us/mission.svg" alt="" srcset="">
+                                    <h2>Mission</h2>
+                                </div>
+                                <p>To grow the business together with clients by providing enhanced services and wide delivery channel to end-users.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-us__culture">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="box-culture col l-6 c-12">
+                        <div class="culture-headline">
+                            <h1>DSI Culture</h1>
+                            <img src="./image/about-us/line-text-black.svg" alt="" srcset="">
+                        </div>
+                        <div class="culture-content">
+                            <p>
+                                Our commitment to innovation depends on everyone being comfortable sharing ideas and opinions. Every employee is a hands-on contributor, and everyone wears several hats. Because we believe that each DSI employee is an equally important part of our success.
+                            </p>
+                            <p>We deeply understand that the average working person spends at least eight hours or even more, so we spend one third even half of our lives to work in a day. therefore we strive to provide a fun and positive environment in
+                                addition to a wide range of benefits to provide safety so they can enjoy working at Dwidasa Samsara Indonesia.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col l-6 c-12">
+                        <div class="future-video">
+                            <img src="./image/about-us/bg-video2.png" class="background-video">
+                            <a href="https://www.youtube.com/watch?v=MxXKfq86E0I" data-youtube-id="MxXKfq86E0I" class="video-banner js-trigger-video-modal">
+                                <img class="video-banner-img" src="./image/about-us/btn-play.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- video modal -->
+        <section class="video-modal">
+            <!-- Modal Content Wrapper -->
+            <div id="video-modal-content" class="video-modal-content">
+                <!-- iframe -->
+                <iframe id="youtube" width="100%" height="100%" frameborder="0" allow="autoplay" allowfullscreen src=></iframe>
+
+                <a href="#" class="close-video-modal">
+                    <!-- X close video icon -->
+                    <img src="./image/about-us/close.svg" alt="" srcset="">
+                </a>
+            </div>
+            <!-- end modal content wrapper -->
+            <!-- clickable overlay element -->
+            <div class="overlay"></div>
+        </section>
+        <div class="contact-us">
+            <div class="grid wide">
+                <div class="contact-us__headline">
+                    <h4>Contact Us</h4>
+                    <img src="./image/about-us/line-text.svg">
+                </div>
+                <div class="row">
+                    <div class="col l-7 c-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d466.03104377556326!2d106.68649693499522!3d20.86203782492702!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314a7af227410253%3A0xbcdfe9ecad64f013!2zMjIgTMO9IFThu7EgVHLhu41uZywgTWluaCBLaGFpLCBI4buTbmcgQsOgbmcsIEjhuqNpIFBow7JuZywgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1647942174850!5m2!1svi!2sus"
+                            width="611" height="427" style="border:0;" allowfullscreen="" loading="lazy" class="map
+                            "></iframe>
+                    </div>
+                    <div class="col l-5 c-12">
+                        <div class="contact-us__infor">
+                            <div class="contact-us__icon">
+                                <a href=""><img src="./image/about-us/home-contact.svg" alt=""></a>
+                            </div>
+                            <div class="contact-us__content">
+                                <h1>Address</h1>
+                                <p>Jl. Halim Perdana Kusuma, Ring Road Bangkalan, Madura, Jawa Timur.</p>
+                            </div>
+                        </div>
+                        <div class="contact-us__infor">
+                            <div class="contact-us__icon">
+                                <a href=""><img src="./image/about-us/mail-contact.svg" alt=""></a>
+                            </div>
+                            <div class="contact-us__content">
+                                <h1>Email</h1>
+                                <p>phamdinhduchp2017@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-us__infor">
+                            <div class="contact-us__icon">
+                                <a href=""><img src="./image/about-us/phone-contact.svg" alt=""></a>
+                            </div>
+                            <div class="contact-us__content">
+                                <h1>Telephone</h1>
+                                <p>32132132132</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+
+</html>

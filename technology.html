@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .technology {
+        background-color: #fff;
+    }
+    
+    .technology-headline {
+        background-image: url('../image/technology/background.png');
+        background-size: 100% 70%;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        text-align: center;
+    }
+    
+    .technology-headline h1 {
+        font-size: 48px;
+        line-height: 68px;
+        color: #FFFFFF;
+        padding-top: 10px 0;
+        font-weight: 400;
+    }
+    
+    .technology-headline h2 {
+        font-size: 48px;
+        line-height: 68px;
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+    
+    .technology-headline input {
+        border: none;
+        background: #FFFFFF;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        padding: 12px 32px;
+        color: #EE4248;
+        font-size: 20px;
+        line-height: 29px;
+        margin: 40px 0;
+        cursor: pointer;
+    }
+    
+    .technology-headline img {
+        width: 100%;
+        max-width: 567px;
+        height: auto;
+    }
+    
+    .flex-logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 60px 0;
+    }
+    
+    .technology-title h4 {
+        font-size: 32px;
+        font-weight: 500;
+    }
+    
+    .technology-content {
+        padding: 20px 0;
+    }
+    
+    .technology-content p {
+        padding: 20px 0;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    
+    .technology-headline h1,
+    h2,
+    input,
+    .macbook {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInDown;
+    }
+    
+    @-webkit-keyframes fadeInDown {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(0, -85%, 0);
+            transform: translate3d(0, -85%, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li class="nav-active"><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu "><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home active-icon "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-mail "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-shuffle "></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="technology">
+            <div class="technology-headline">
+                <h1>“Knowledge” some way of future</h1>
+                <h2>up-to-date in latest technology</h2>
+                <div class="technology-headline__button">
+                    <input type="button" value="Learn more">
+                </div>
+                <img src="../image/technology/Macbook.png" alt="" class="macbook">
+            </div>
+            <div class="grid wide">
+                <div class="technology-logo">
+                    <div class="row">
+                        <div class="col l-12 m-12 c-12">
+                            <div class="flex-logo">
+                                <img src="./image/technology/java.png" alt="">
+                                <img src="./image/technology/php.png" alt="">
+                                <img src="./image/technology/css.png" alt="">
+                                <img src="./image/technology/html_5.png" alt="">
+                                <img src="./image/technology/microsoft.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="technology-main">
+                    <div class="row">
+                        <div class="col l-12 c-12 m-12">
+                            <div class="technology-title">
+                                <h4>Our technology</h4>
+                                <img src="./image/technology/line-text.svg" alt="">
+                            </div>
+                            <div class="technology-content">
+                                <p>dfgdfFirst JAVA, runs on more than 850 million personal computers worldwide, and on billions of devices worldwide, including mobile and TV devices.The latest Java version contains important enhancements to improve performance,
+                                    stability and security of the Java applications that run on your machine. Installing this free update will ensure that your Java applications continue to run safely and efficiently. The best part of JAVA is free.
+                                </p>
+                                <p>
+                                    We also use PHP for general occation, why? we think you already know the reason,of course because is the most flexible language on earth that can colaborate very well with all language.
+                                </p>
+                                <p>for the strusture is HTML & CSS ( who does not know ? ) cause it's the basic language use for the web and help us creating a very outstanding view. its become important cause it make our system looks good in front of the
+                                    eyes of our client, (doesnt agree?), Hmm, let me ask you if you have a good software but with bad UI/UX, do people use it? cause for it we can reach our goals.
+                                </p>
+                                <p>What about Microsoft technology, why not. . . We always strive to remain the best and try to keep developing what we have.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+</html>

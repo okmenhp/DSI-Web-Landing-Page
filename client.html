@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <title>DSI</title>
+</head>
+<style>
+    .client-banner {
+        position: relative;
+        padding-top: 40px;
+        border-bottom: solid 20px #EE4248;
+    }
+    
+    .client-banner::before {
+        position: absolute;
+        bottom: -5px;
+        z-index: -1;
+        content: url('./image/client-bg2.png');
+    }
+    
+    .client-banner__headline {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .client-banner__headline h1 {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 68px;
+        color: #30444E;
+    }
+    
+    .client-banner__headline h2 {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 68px;
+        color: #30444E;
+    }
+    
+    .client-banner__image img {
+        width: 100%;
+        height: auto;
+        vertical-align: bottom;
+    }
+    
+    .headline {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 50px 0;
+    }
+    
+    .headline img {
+        position: absolute;
+        bottom: -5px;
+    }
+    
+    .headline h1 {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 51px;
+        color: #263238;
+    }
+    
+    .client-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
+    }
+    
+    .client-box:nth-child(2) {
+        background-color: #f7f7f7;
+    }
+    
+    .client-box:nth-child(3) {
+        background-color: #fff;
+    }
+    
+    .client-box:nth-child(4) {
+        background-color: #f7f7f7;
+    }
+    
+    .client-box__image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .client-box__image img {
+        width: 100%;
+        max-width: 445px;
+        height: auto;
+    }
+    
+    .client-box__content h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 45px;
+        color: #263238;
+        padding-bottom: 15px;
+    }
+    
+    .client-box__content h2 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+        color: #EE4248;
+    }
+    
+    .client-box__content p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        color: #263238;
+        padding-bottom: 15px;
+    }
+    
+    .client-testimonial {
+        padding-bottom: 100px;
+        padding-top: 30px;
+        background-color: #fff;
+    }
+    
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .swiper-button-next {
+        color: #EE4248;
+    }
+    
+    .swiper-button-prev {
+        color: #EE4248;
+    }
+    
+    .testimonial-item {
+        display: flex;
+    }
+    
+    .testimonial-avatar {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .testimonial-avatar img {
+        max-width: 343px;
+        border-radius: 32px 0px;
+    }
+    
+    .testimonial-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .testimonial-content img {
+        max-width: 48px;
+        height: auto;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    
+    .testimonial-content p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.2px;
+        color: #373F41;
+    }
+    
+    .testimonial-content h6 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        color: #30444E;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu "><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu nav-active"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-mail "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-shuffle "></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="client">
+            <div class="client-banner">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="client-banner__headline col l-6">
+                            <h1>Taking our client in more comfortable way </h1>
+                            <h2>Deliver IT around the globe</h2>
+                        </div>
+                        <div class="col l-6">
+                            <div class="client-banner__image">
+                                <img src="./image/client/bg1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="client-main">
+                <div class="headline">
+                    <h1>Client Line-Up</h1>
+                    <img src="./image/client/line-text.svg" alt="">
+                </div>
+                <div class="client-box">
+                    <div class="grid wide">
+                        <div class="client-center row">
+                            <div class="client-box__image col l-6">
+                                <img src="./image/client/logo1.png" alt="">
+                            </div>
+                            <div class="client-box__content col l-6">
+                                <h1>Bank Tabungan Negara</h1>
+                                <h2>Project WB-Bank BTN :
+                                </h2>
+                                <p>Application Development Project Teller System or known as Web Applications Branch for Bank BTN. Project is to replace the existing application at Bank BTN is running under the Windows platform or desktop applications into
+                                    Web-based applications applications.
+                                </p>
+                                <p>Branch Web application will be implemented throughout the Bank BTN - Indonesia, about 600 BTN Office.
+                                </p>
+                                <p>Web framework: tapestry 5.3 </br>Back end : spring 3.1 + jpa 2</br>Security: apache shiro </br>Database: ibm db2 9.7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-box">
+                    <div class="grid wide">
+                        <div class="client-center row">
+                            <div class="client-box__image col l-6 m-6">
+                                <img src="./image/client/logo2.png" alt="">
+                            </div>
+                            <div class="client-box__content col l-6">
+                                <h1>Bank BPR KS</h1>
+                                <h2>Mobile Banking :
+                                </h2>
+                                <p>This project provides delivery channel application over mobile device for customer to perform banking and financial transactions, such as inquiry balance, overbook, purchase, and payment. Using: JAVA technologies, PostgreSQL,
+                                    Android technologies, iOS technologies, Blackberry technologies
+                                </p>
+                                <h2>Soft Token :
+                                </h2>
+                                <p>This project provides software application to generate token secure code from mobile device used to authenticate banking and financial transaction from delivery channel performed by customer. Using: JAVA technologies, PostgreSQL,
+                                    Android technologies, iOS technologies, Blackberry technologies</p>
+                                <h2>Internet Banking :
+                                </h2>
+                                <p>This project provides delivery channel application over web browser for customer to perform banking and financial transactions, such as inquiry balance, overbook, purchase, and payment. Using: JAVA technologies, PostgreSQL</p>
+                                <h2>KIOSK :
+                                </h2>
+                                <p>This project provides non-cash delivery channel machine and software application for customer to perform banking and financial transactions, such as inquiry balance, overbook, purchase, and payment. Using: JAVA technologies,
+                                    .NET framework, PostgreSQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="client-box">
+                    <div class="grid wide">
+                        <div class="client-center row">
+                            <div class="client-box__image col l-6">
+                                <img src="./image/client/logo3.png" alt="">
+                            </div>
+                            <div class="client-box__content col l-6">
+                                <h1>Bank BPR KS</h1>
+                                <h2>Mobile Banking :
+                                </h2>
+                                <p>This project provides delivery channel application over mobile device for customer to perform banking and financial transactions, such as inquiry balance, overbook, purchase, and payment. Using: JAVA technologies, PostgreSQL,
+                                    Android technologies, iOS technologies, Blackberry technologies
+                                </p>
+                                <h2>Internet Banking :
+                                </h2>
+                                <p>This project provides delivery channel application over web browser for customer to perform banking and financial transactions, such as inquiry balance, overbook, purchase, and payment. Using: JAVA technologies, PostgreSQL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="client-testimonial">
+                <div class="headline">
+                    <h1>Testimonial</h1>
+                    <img src="./image/client/line-text.svg" alt="">
+                </div>
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="row testimonial-item">
+                                        <div class="testimonial-avatar col l-5 c-10">
+                                            <img src="./image/client/avatar1.png" alt="">
+                                        </div>
+                                        <div class="testimonial-content col l-6 c-10">
+                                            <img src="./image/client/quote.png" alt="" srcset="">
+                                            <p>Est tation latine aliquip id, mea ad tale illud definitiones. Periculis omittantur necessitatibus eum ad, pro eripuit minimum comprehensam ne, usu cu stet prompta reformidans.</p>
+                                            <h6>Connie Robertson at Google</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row testimonial-item">
+                                        <div class="testimonial-avatar col l-5">
+                                            <img src="./image/client/avatar2.png" alt="">
+                                        </div>
+                                        <div class="testimonial-content col l-6">
+                                            <img src="./image/client/quote.png" alt="" srcset="">
+                                            <p>Est tation latine aliquip id, mea ad tale illud definitiones. Periculis omittantur necessitatibus eum ad, pro eripuit minimum comprehensam ne, usu cu stet prompta reformidans.</p>
+                                            <h6>Connie Robertson at Google</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="row testimonial-item">
+                                        <div class="testimonial-avatar col l-5">
+                                            <img src="./image/client/avatar3.png" alt="">
+                                        </div>
+                                        <div class="testimonial-content col l-6">
+                                            <img src="./image/client/quote.png" alt="" srcset="">
+                                            <p>Est tation latine aliquip id, mea ad tale illud definitiones. Periculis omittantur necessitatibus eum ad, pro eripuit minimum comprehensam ne, usu cu stet prompta reformidans.</p>
+                                            <h6>Connie Robertson at Google</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+</script>
+<script>
+    var hamburger = document.getElementById("navigation-mobile");
+    var navigation = document.getElementById("navigation");
+    hamburger.addEventListener('click', function() {
+        navigation.classList.toggle('active')
+    })
+</script>
+
+</html>

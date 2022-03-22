@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .partner {
+        position: relative;
+        background-color: #f9f9f9;
+    }
+    
+    .partner::before {
+        content: url('./image/parter/bg-top.png');
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .partner::after {
+        content: url('./image/parter/bg-bottom.png');
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    
+    .partner-header {
+        text-align: center;
+        margin: 80px 0;
+    }
+    
+    .partner-header h1 {
+        font-weight: 400;
+        font-size: 48px;
+        color: #263238;
+        line-height: 68px;
+    }
+    
+    .partner-header h1 span {
+        font-weight: 500;
+    }
+    
+    .partner-content {
+        padding: 40px 0;
+        position: relative;
+        background-color: #fff;
+    }
+    
+    .partner-content::after {
+        content: url('./image/parter/bg-left.png');
+        position: absolute;
+        top: 100px;
+        z-index: 1;
+    }
+    
+    .partner-content::before {
+        content: url('./image/parter/bg-right.png');
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    
+    .partner-header p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        color: #455A64;
+        padding-top: 24px;
+    }
+    
+    .partner-headline {
+        text-align: center;
+        padding-bottom: 50px;
+    }
+    
+    .partner-headline::after {
+        content: url('./image/parter/line-text.svg');
+    }
+    
+    .partner-main {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        z-index: 5;
+    }
+    
+    .partner-card {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 0;
+        background-color: #fff;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+    }
+    
+    .partner-card__image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .partner-card__image {
+        text-align: center;
+    }
+    
+    .partner-card__body {
+        margin: 20px 20px;
+    }
+    
+    .partner-card__content p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: #263238;
+    }
+</style>
+
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu "><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-active"><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-mail"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-shuffle"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="partner">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-9 l-o-2 c-12 m-12">
+                        <div class="partner-header">
+                            <h1>Together we are strong, </br><span>One-stop solution for all banking needs</span></h1>
+                            <p>Dwidasa Samsara Indonesia is a joint collaboration with several parties that has a good reputation as a business partner, so that we can be the first choice as a “one stop solution” for all banking services provider.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="partner-content">
+            <div class="grid wide">
+                <div class="col l-12 c-12 m-12">
+                    <div class="row">
+                        <div class="col l-12 c-12 m-12">
+                            <div class="partner-headline">
+                                <h2>Partners Line Up</h2>
+                            </div>
+                        </div>
+                        <div class="partner-main">
+                            <div class="col l-3 m-12">
+                                <div class="partner-card">
+                                    <div class="partner-card__body">
+                                        <div class="partner-card__image">
+                                            <img src="./image/parter/logo1.png">
+                                        </div>
+                                        <div class="partner-card__content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui quis volutpat venenatis bibendum hendrerit pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui quis volutpat venenatis bibendum
+                                                hendrerit pulvinar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-3 m-12">
+                                <div class="partner-card">
+                                    <div class="partner-card__body">
+                                        <div class="partner-card__image">
+                                            <img src="./image/parter/logo2.png">
+                                        </div>
+                                        <div class="partner-card__content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui quis volutpat venenatis bibendum hendrerit pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui quis volutpat venenatis bibendum
+                                                hendrerit pulvinar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l-3 m-12">
+                                <div class="partner-card">
+                                    <div class="partner-card__body">
+                                        <div class="partner-card__image">
+                                            <img src="./image/parter/logo3.png">
+                                        </div>
+                                        <div class="partner-card__content">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui quis volutpat venenatis bibendum hendrerit pulvinar. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dui quis volutpat venenatis bibendum
+                                                hendrerit pulvinar.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop ">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+</html>

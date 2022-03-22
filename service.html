@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .service-headline {
+        background-image: url('../image/service/line1.svg');
+        background-size: contain;
+        padding-top: 31px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+    }
+    
+    .service-headline h1 {
+        font-size: 48px;
+        text-align: center;
+        color: #263238;
+        font-weight: 400;
+    }
+    
+    .service-headline h2 {
+        font-size: 48px;
+        text-align: center;
+        color: #263238;
+        font-weight: 700;
+        padding-bottom: 60px;
+        color: #EE4248;
+        width: 35rem;
+    }
+    
+    .service-content {
+        padding: 100px 0;
+        background-color: #fff !important;
+    }
+    
+    .service-content p {
+        font-size: 20px;
+        line-height: 27px;
+        color: #30444E;
+        padding: 20px 0;
+        font-weight: 400;
+    }
+    
+    .service-img {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    
+    .service h4 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 43px;
+        color: #1F2E35;
+    }
+    
+    .service-content__reverse {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .padding-content {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInLeft;
+    }
+    
+    .service-img {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInRight;
+    }
+    
+    @-webkit-keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(-45%, 0, 0);
+            transform: translate3d(-45%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    @-webkit-keyframes fadeInRight {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(45%, 0, 0);
+            transform: translate3d(45%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li class="nav-active"><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu "><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-mail"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-shuffle"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="service">
+            <div class="service-headline">
+                <h1>Just a smile away from </h1>
+                <h2>Winning your customer’s trust</h2>
+            </div>
+            <div class="service-content">
+                <div class="grid wide">
+                    <div class="service-content__reverse row">
+                        <div class="col l-6 c-12 m-12">
+                            <div class="padding-content">
+                                <div class="service-title">
+                                    <h4>Our Service</h4>
+                                    <img src="../image/service/line-text.svg">
+                                </div>
+                                <p><span>DSI’s</span> shared service solutions focus on the front-end based software development, designed specifically for the banking and financial sectors. We short-cut your front-liners to customers interaction process
+                                    through a way that mediates your business process in a more direct communication means, in just a smile away from winning your customer’s trust.</p>
+                                <p>Through close partnership, we always work together with your team, all throughout from pretopost project cycles – initial planning, project development, implementation, evaluation up to reporting documentation – to fully
+                                    coach you so that all your specific business.
+                                </p>
+                                <p>requirements can be delivered at the right time to the right audience of particular interests. Moreover, our team will support you to provide a detailed consultation throughout operation stage, and after the project implementation
+                                    cycles by applying specific monitoring and improvement methodology. Our experienced people will drive your personalized service, by utilizing the best technology supports no other businesses can provide.
+                                </p>
+                            </div>
+                        </div>
+                        <div class=" col l-6 c-12 m-12">
+                            <img src="../image/service/character.svg " alt=" " class="service-img ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop ">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .product-headline {
+        background-color: #E5E5E5;
+        padding-bottom: 20px;
+        color: #fff;
+    }
+    
+    .product-headline h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 300;
+        background-color: #EE4248;
+        padding: 50px 0;
+        line-height: 64px;
+    }
+    
+    .product-headline span {
+        font-weight: 400;
+    }
+    
+    .product-padding {
+        padding: 70px 0;
+    }
+    
+    .product-title h4 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 43px;
+        color: #1F2E35;
+    }
+    
+    .our-product p {
+        font-size: 18px;
+        line-height: 27px;
+        color: #30444E;
+        padding: 30px 0;
+    }
+    
+    .product-img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .product-padding {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li class="nav-active"><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu "><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-mail"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon icon-shuffle"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="our-product">
+            <div class="product-headline">
+                <h1>The most advanced technology </br><span>always work hand-in-hand with </br>qualified people</span></h1>
+            </div>
+            <div class="grid wide">
+                <div class="product-padding row">
+                    <div class="col l-6 c-12 m-12">
+                        <div class="product-title">
+                            <h4>Our Product</h4>
+                            <img src="./image/product/line-text.svg">
+                        </div>
+                        <p>Our product is made on the base of our team’s careful research and analyses, ranging from internet based application such as Internet Banking; mobile frontend application such as Mobile Banking; transaction based banking such as
+                            EDC Banking; and other financial platforms such as Personal Investment Portfolio.
+                        </p>
+
+                        <p>Our product and service range will technically safeguard your business operations through continued application development. It is all topped with our integrated procedure made in accordance with the industry’s best practices,
+                            which will drive the built-in system towards the creation of secured and value added services for you as business partners.
+                        </p>
+                    </div>
+                    <div class="col l-6 c-12 m-12 ">
+                        <img src="./image/product/content.svg " alt=" " class="product-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop ">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+</html>

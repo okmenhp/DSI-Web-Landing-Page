@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .banner {
+        background-color: #fff;
+        padding: 80px 0;
+    }
+    
+    .banner-content h1 {
+        font-size: 48px;
+        color: #1F2E35;
+        font-weight: bold;
+        line-height: 133.69%;
+    }
+    
+    .banner-content span {
+        font-size: 48px;
+        color: #EE4248;
+        font-weight: bold;
+    }
+    
+    .banner-content p {
+        font-size: 20px;
+        color: #30444E;
+        font-weight: 400;
+        line-height: 29px;
+        padding: 30px 0;
+    }
+    
+    .banner-image img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .banner-content input {
+        border: none;
+        background: #EE4248;
+        color: #fff;
+        font-size: 20px;
+        padding: 15px 30px;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+    }
+    
+    .introduce {
+        padding: 40px 0;
+    }
+    
+    .introduce-image img {
+        /* width: 100%; */
+        height: auto;
+    }
+    
+    .introduce-content p {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        counter-reset: #30444E;
+        padding-top: 45px;
+    }
+    
+    .introduce-content span {
+        font-size: 32px;
+        color: #EE4248;
+        font-weight: 500;
+    }
+    
+    .product {
+        background-color: #fff;
+        padding: 100px 0;
+    }
+    
+    .product h2 {
+        padding-bottom: 40px;
+        color: #1F2E35;
+        font-weight: 500;
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .product-card__headline {
+        color: #EE4248;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 133.69%;
+        padding: 15px 0;
+    }
+    
+    .product-card__content {
+        font-size: 18px;
+        line-height: 27px;
+        color: #30444E;
+        padding-bottom: 15px;
+    }
+    
+    .product-card input {
+        border: none;
+        background: #EE4248;
+        color: #fff;
+        font-size: 16px;
+        padding: 8px 16px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+    }
+    
+    .banner-content {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInLeft;
+    }
+    
+    .banner-image {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        animation-name: fadeInRight;
+    }
+    
+    @-webkit-keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(-45%, 0, 0);
+            transform: translate3d(-45%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    @-webkit-keyframes fadeInRight {
+        from {
+            opacity: 0;
+            -webkit-transform: translate3d(45%, 0, 0);
+            transform: translate3d(45%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+    
+    .reveal {
+        /* position: relative; */
+        transform: translateY(150px);
+        opacity: 0;
+        transition: 1s all ease;
+    }
+    
+    .reveal.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu "><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home active-icon "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-mail "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-shuffle "></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="banner">
+            <div class="grid wide">
+                <div class="banner-reverse row">
+                    <div class="col l-6 c-12 m-12">
+                        <div class="banner-content">
+                            <h1>Making the most of the ever-growing </br><span>Information Technology</span></h1>
+                            <p>Managed by a team of professional experts with extensive experience and impressive track records</p>
+                            <input type="button" value="Read more">
+                        </div>
+                    </div>
+                    <div class="col l-6 c-12 m-12">
+                        <div class="banner-image">
+                            <img src="../image/index/banner.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="introduce">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-6 c-12 m-12">
+                        <div class="introduce-image">
+                            <img src="../image/index/designer.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="col l-6 c-12 m-12">
+                        <div class="introduce-content">
+                            <h1>Welcome to <span>Dwidasa Samsara Indonesia (DSI)</span></h1>
+                            <p>Dwidasa Samsara Indonesia (DSI) was firstly established in 2010 by the founders, who each of them has a common end objective to innovate new creations by making the most of the ever-growing information technology through DSI’s
+                                distinct front-end based application concept.</p>
+                            <p>Managed by a team of professional experts with extensive experience and impressive track records, DSI believes that continuous improvements and innovations assure your business to run effectively and efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="grid wide">
+                <h2>Product and Service</h2>
+                <div class="row">
+                    <div class=" col l-4 c-12 m-4">
+                        <div class="product-card reveal">
+                            <img src="./image/our product.png" alt="">
+                            <h3 class="product-card product-card__headline">Our Product</h3>
+                            <p class="product-card product-card__content">Our product is made on the base of our team’s careful research and analyses, ranging from internet based application designed specifically designed specifically.</p>
+                            <input type="button" value="Read more">
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-4">
+                        <div class="product-card reveal">
+                            <img src="./image/our service.png" alt="">
+                            <h3 class="product-card product-card__headline">Our Service</h3>
+                            <p class="product-card product-card__content">Our product is made on the base of our team’s careful research and analyses, ranging from internet based application designed specifically designed specifically.</p>
+                            <input type="button" value="Read more">
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-4">
+                        <div class="product-card reveal">
+                            <img src="./image/our technology.png" alt="">
+                            <h3 class="product-card product-card__headline">Our Technology</h3>
+                            <p class="product-card product-card__content">Our product is made on the base of our team’s careful research and analyses, ranging from internet based application designed specifically designed specifically.</p>
+                            <input type="button" value="Read more">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop ">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <title>DSI</title>
+</head>
+<style>
+    .about-banner {
+        background-color: #f7f7f7;
+        border-bottom: 10px solid #EE4248;
+        position: relative;
+    }
+    
+    .about-banner::after {
+        content: url('./image/about/bg1.png');
+        position: absolute;
+        bottom: 0;
+    }
+    
+    .about-banner::before {
+        content: url('./image/about/bg2.png');
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    
+    .about-banner__main {
+        text-align: center;
+    }
+    
+    .about-banner__headline h1 {
+        font-weight: 400;
+        font-size: 48px;
+        line-height: 68px;
+        color: #30444E;
+    }
+    
+    .about-banner__headline h2 {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 68px;
+        color: #30444E;
+    }
+    
+    .about-banner__image img {
+        vertical-align: bottom;
+    }
+    
+    .manager {
+        padding: 50px 0;
+    }
+    
+    .about-headline {
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    
+    .about-headline h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 45px;
+        color: #263238;
+    }
+    
+    .about-card {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        margin: 12px 0;
+    }
+    
+    .about-card__body h1 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: #EE4248;
+    }
+    
+    .about-card__body h2 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.1px;
+        padding: 5px;
+        color: #252B42;
+    }
+    
+    .about-card__contact {
+        padding: 30px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .about-card__image {
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    .circle {
+        padding: 24px;
+        max-width: 20px;
+        max-height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50px;
+        -moz-border-radius: 50px;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+    
+    .circle a {
+        color: #EE4248;
+        font-size: 18px;
+    }
+    
+    .manager-card__space {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .mobile-specialist {
+        padding: 50px 0;
+        background-color: #FFFFFF;
+    }
+    
+    .consultant {
+        padding: 50px 0;
+        background-color: #f7f7f7;
+    }
+    
+    .java-specialist {
+        padding: 50px 0;
+        background-color: #f7f7f7;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="grid wide">
+            <div class="header-wraper">
+                <div class="logo">
+                    <a href="index.html"><img src="./image/logo.png" alt="" srcset=""></a>
+                </div>
+                <nav id="navigation">
+                    <ul>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                        <li class="sub-menu nav-active"><a href="#">About <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="about-us.html">About 1</a></li>
+                                <li><a href="about.html">About 2</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu"><a href="#">Client <i class="fa fa-angle-down"></i></a>
+                            <ul>
+                                <li><a href="client.html">Client 1</a></li>
+                                <li><a href="">Client 2</a></li>
+                                <li><a href="">Client 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="parter.html">Partner</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger-icon" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                    <div class="bar4"></div>
+                </div>
+                <div class="nav-icon">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <span class="icon icon-home"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-mail "></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=" ">
+                                <span class="icon icon-shuffle "></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="about">
+            <div class="about-banner">
+                <div class="grid wide">
+                    <div class="about-banner__main">
+                        <div class="about-banner__headline">
+                            <h1>Alone is a vision</h1>
+                            <h2>together we make it reality</h2>
+                        </div>
+                        <div class="about-banner__image">
+                            <img src="./image/about/bg3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="manager">
+                <div class="about-headline">
+                    <h1>Manajemen</h1>
+                    <img src="./image/about/line-text.svg" alt="" srcset="">
+                </div>
+                <div class="grid wide">
+                    <div class="manager-card__space row">
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="consultant">
+                <div class="about-headline">
+                    <h1>Consultant</h1>
+                    <img src="./image/about/line-text.svg" alt="" srcset="">
+                </div>
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-specialist">
+                <div class="about-headline">
+                    <h1>Mobile Specialist</h1>
+                    <img src="./image/about/line-text.svg" alt="" srcset="">
+                </div>
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="java-specialist">
+                <div class="about-headline">
+                    <h1>Mobile Specialist</h1>
+                    <img src="./image/about/line-text.svg" alt="" srcset="">
+                </div>
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-6 c-12">
+                            <div class="about-card">
+                                <div class="about-card__image">
+                                    <img src="./image/about/avatar.png" alt="">
+                                </div>
+                                <div class="about-card__body">
+                                    <h1>President Director</h1>
+                                    <h2>Rodney Stratton</h2>
+                                </div>
+                                <div class="about-card__contact">
+                                    <div class="circle">
+                                        <a href="#" title="Like us!">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Tweet us!">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="circle">
+                                        <a href="#" title="Code with us!">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer ">
+            <div class="grid wide ">
+                <div class="footer-padding row ">
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-address ">
+                            <img src="./image/logo.png " alt=" " srcset=" ">
+                            <h4>PT Dwidasa Samsara Indonesia</h4>
+                            <p>Ruko Jalur Sutera 29A No. 53 </br>Alam Sutera Serpong, Tangerang 15323</p>
+                        </div>
+                    </div>
+                    <div class="col l-4 c-12 m-6 ">
+                        <div class="footer-contact ">
+                            <h3>Contact</h3>
+                            <p>Phone : +22.22.2222.111</p>
+                            <p>Fax : +22.22.2222.1111</p>
+                            <p>Email : phamdinhduchp2017.com</p>
+                        </div>
+                    </div>
+                    <div class="col l-3 c-10 m-12 ">
+                        <div class="row footer-coop">
+                            <img src="./image/footer-logo-1.png ">
+                            <img src="./image/footer-logo-2.png ">
+                            <img src="./image/footer-logo-3.png ">
+                            <img src="./image/footer-logo-4.png ">
+                            <img src="./image/footer-logo-6.png ">
+                            <img src="./image/footer-logo-5.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright ">
+                <p>Copyright © 2015 - Dwidasa Samsara Indonesia</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./js/main.js "></script>
+
+</html>
